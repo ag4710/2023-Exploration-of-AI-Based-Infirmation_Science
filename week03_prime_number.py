@@ -1,5 +1,4 @@
 number = int(input("Input number : "))
-#count = 0
 is_prime = True
 
 for i in range(2, number): # -2 loop
