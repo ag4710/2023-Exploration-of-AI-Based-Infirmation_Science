@@ -10,6 +10,8 @@ while True:
         celsius = float(input('Enter temperature in celsius : '))
         fahrenheit = (celsius * 9.0 / 5.0) * 32.0
         print(f"{celsius:.2f} degrees Celsius is {fahrenheit:.2f} degrees Fahrenheit.")
+    elif menu == "3":
+        break
     else:
         print("Please choose from the given menu.")
     print("Program finished")
