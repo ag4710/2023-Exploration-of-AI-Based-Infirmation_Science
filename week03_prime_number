@@ -1,0 +1,3 @@
+# week03_prime_number
+number = int(input("Inout number : "))
+count = 0
