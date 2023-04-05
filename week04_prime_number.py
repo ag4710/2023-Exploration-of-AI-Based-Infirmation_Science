@@ -1,5 +1,5 @@
 # week04_prime_number_quiz v1.0
-#add function
+# add is_prime function
 
 def is_prime(n) -> bool:
     """
