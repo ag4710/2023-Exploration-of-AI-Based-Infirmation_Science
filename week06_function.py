@@ -1,12 +1,20 @@
 # week06_function.py
-def ishs(arg, result=None):
-    if result is None:
-        result = []
-    result.append(arg)
-    print(result)
+def my_generator(first=0, last=10, step=1):
+    """
 
+    :param first: starting value, (default : 0)
+    :param last: ending value, (default : 10)
+    :param step: step value, (default :1)
+    :return: generated value
+    """
+    number = first
+    while number < last:
+        yield number
+        number += step
 
-nb = [9]
-ishs(7)
-ishs(8)
-ishs(3, nb)
+ranger = my_generator(5,10)
+for k in ranger:
+    print(k, end=' ')
+
+for k in ranger:
+    print(k, end=' ')
