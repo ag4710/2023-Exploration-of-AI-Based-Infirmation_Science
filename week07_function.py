@@ -1,7 +1,7 @@
 import my_util
 
 
-@my_util.time_checker
+#@my_util.time_checker
 def factorial_repetition(n):
     """
     factorial function with repetiton
@@ -14,7 +14,7 @@ def factorial_repetition(n):
     return result
 
 
-@my_util.time_checker
+#@my_util.time_checker
 def factorial_recursion(n):
     """
     factorial function with recursion
@@ -39,7 +39,7 @@ memo = [None for _ in range(100)]
         return data[x]
     }
 """
-@my_util.time_checker
+#@my_util.time_checker
 def fibonacci_recursion(n):
     """
     fibonacci number function
