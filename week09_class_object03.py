@@ -4,22 +4,32 @@ class Poketmon:
         self.level = level
         self.hp = hp
 
+    def say(self):
+        print(f"I'm a poketmon, My name is {self.name}")
+
+
+class Pikachu(Poketmon):  # is-a relationship, inheritance
+    pass
+
+
+class Squirtle(Poketmon):
+    pass
+
+
+class Digimon:
+    pass
+
+
 if __name__ == "__main__":
-    pikachu = Poketmon("pikachu", 1, 35)
-    squirtle = Poketmon("squirtle", 1, 44)
+    pikachu = Pikachu("pikachu", 1, 35)
+    pikachu.say()
+
+    squirtle = Squirtle("squirtle", 1, 44)
+
     charizard = Poketmon("charizard", 36, 78)
+    charizard.say()
 
-    print(squirtle.hp)
-    print(squirtle.level)
     print(squirtle.name)
-    print(squirtle)
-
-    print(pikachu.hp)
-    print(pikachu.level)
     print(pikachu.name)
-    print(pikachu)
-
-    print(charizard.hp)
-    print(charizard.level)
-    print(charizard.name)
-    print(charizard)
+    print(issubclass(Squirtle, Poketmon))
+    print(issubclass(Digimon, Poketmon))
