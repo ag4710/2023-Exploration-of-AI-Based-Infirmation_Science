@@ -1,19 +1,31 @@
-class Poketmon:
+class Pokemon:
     def __init__(self, name, level, hp):
         self.name = name
         self.level = level
         self.hp = hp
 
     def say(self):
-        print(f"I'm a poketmon, My name is {self.name}")
+        print(f"I'm a pokemon, My name is {self.name}")
 
 
-class Pikachu(Poketmon):  # is-a relationship, inheritance
-    pass
+    def attack(self):
+        print(f"{self.name} launches an area attack")
 
 
-class Squirtle(Poketmon):
-    pass
+class Pikachu(Pokemon):  # is-a relationship, inheritance
+    def attack(self):
+        print(f"{self.name} launches an area-of-effect electric attack.")
+
+
+class Squirtle(Pokemon):
+    def attack(self):
+        print(f"{self.name} casts a wide-area water cannon attack")
+
+
+class Charizard(Pokemon):
+    def attack(self):  # derived class method, override
+        super().attack()  # base class method
+        print(f"{self.name} casts a wide-area fire attack.")
 
 
 class Digimon:
@@ -23,13 +35,16 @@ class Digimon:
 if __name__ == "__main__":
     pikachu = Pikachu("pikachu", 1, 35)
     pikachu.say()
-
     squirtle = Squirtle("squirtle", 1, 44)
-
-    charizard = Poketmon("charizard", 36, 78)
+    charizard = Charizard("charizard", 36, 78)
     charizard.say()
+
+
+    charizard.attack()
+    pikachu.attack()
+    squirtle.attack()
 
     print(squirtle.name)
     print(pikachu.name)
-    print(issubclass(Squirtle, Poketmon))
-    print(issubclass(Digimon, Poketmon))
+    print(issubclass(Squirtle, Pokemon))
+    print(issubclass(Digimon, Pokemon))
