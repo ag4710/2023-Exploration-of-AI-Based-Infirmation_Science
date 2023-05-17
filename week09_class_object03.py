@@ -4,6 +4,7 @@ class Pokemon:
         self.level = level
         self.hp = hp
 
+
     def say(self):
         print(f"I'm a pokemon, My name is {self.name}")
 
@@ -12,9 +13,17 @@ class Pokemon:
         print(f"{self.name} launches an area attack")
 
 
+    def attack_target(self, target):
+        print(f"{self.name} attacks {target}!")
+
+
 class Pikachu(Pokemon):  # is-a relationship, inheritance
     def attack(self):
         print(f"{self.name} launches an area-of-effect electric attack.")
+
+
+    def attack_target(self, target):
+        print(f"{self.name} launches an electric attacks on {target}!")
 
 
 class Squirtle(Pokemon):
@@ -22,10 +31,18 @@ class Squirtle(Pokemon):
         print(f"{self.name} casts a wide-area water cannon attack")
 
 
+    def attack_target(self, target):
+        print(f"{self.name} casts a water cannon attack on {target}!")
+
+
 class Charizard(Pokemon):
     def attack(self):  # derived class method, override
         super().attack()  # base class method
         print(f"{self.name} casts a wide-area fire attack.")
+
+
+    def attack_target(self, target):
+        print(f"{self.name} casts a fire attack on {target}!")
 
 
 class Digimon:
@@ -40,6 +57,7 @@ if __name__ == "__main__":
     charizard.say()
 
 
+    pikachu.attack_target(squirtle.name)
     charizard.attack()
     pikachu.attack()
     squirtle.attack()
