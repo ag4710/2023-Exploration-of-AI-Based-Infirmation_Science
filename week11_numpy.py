@@ -1,17 +1,5 @@
 import numpy as np
 
-d2 = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
-print(d2)
-
-print(d2[::2][::2])  # 첫 슬라이싱 : 0행, 2행 선택 후 /// 두 번째 슬라이싱: 그 중 0행 선택
-print(d2[::2, ::2])  # 행 슬라이싱 : 0행, 2행 선택 /// 열 슬라이싱 : 0열, 2열 선택
-
-print(d2[0:2, 2:])
-print(d2[1], d2[1,:])
-print(d2[:, 2:3])
-print(d2[:, 2])
-print(d2[0:2, 0:2])
-print(d2[1::2, 1::2])
 d2_33 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print(d2_33 > 5)
 print(d2_33[d2_33 > 5])
@@ -19,3 +7,14 @@ print(d2_33[:, 2])
 print(d2_33[:, 2] > 5)
 print(d2_33[:] % 2 == 0)
 print(d2_33[d2_33[:] % 2 == 0])
+q = np.array([['a','b','c','d'],['c','c','g','h']])
+matrix_a = np.array([[10, 20, 30], [10, 20, 30]])
+matrix_b = np.array([[2, 2, 2], [1, 2, 3]])
+
+# print(q[q =='c'])
+# print(matrix_a - matrix_b)
+# print(matrix_a + matrix_b)
+
+print(matrix_a)
+print(matrix_b)
+print(matrix_a * matrix_b)
